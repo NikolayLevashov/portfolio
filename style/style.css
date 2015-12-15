@@ -55,23 +55,6 @@ body{
 
 }
 
-#nav-block{
-
-}
-
-#nav-block .menu{
-
-}
-
-#nav-block .menu .small{
-
-}
-
-#nav-block .menu .start-block{
-
-}
-
-
 .wrapper{
 	width: 100%;
 	height: 100%;
@@ -88,6 +71,10 @@ body{
     -moz-transition: height 1s;
     -o-transition: height 1s;
     transition: height 1s;
+}
+
+#head-block p{
+	cursor: pointer;
 }
 
 #head-block p.head-title{
@@ -223,7 +210,12 @@ body{
 	overflow: hidden;
 	width: 100%;
 	height: 300px;
+	display: none;
 	position: relative;
+}
+
+#content-block .info-block-wrapper.active{
+display: block;
 }
 
 #content-block .info-block{
