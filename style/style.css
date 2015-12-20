@@ -98,6 +98,14 @@ body.light{
 	margin-bottom: 10px;
 }
 
+body.grey #head-block p.info{
+	text-shadow: 1px 1px 2px black;
+}
+
+body.light #head-block p.info{
+	text-shadow: 1px 1px 2px #CACACA;
+}
+
 #head-block .color{
 	display: block;
 	height: 50px;
@@ -270,6 +278,14 @@ body.light .nav-block .main-nav:after{
 	background-color: #EF6A00;
 }
 
+body.grey #content-block{
+	color: white;
+}
+
+body.light #content-block{
+	color: black;
+}
+
 #content-block .info-block-wrapper{
 	overflow: hidden;
 	width: 100%;
@@ -304,7 +320,7 @@ body.light .nav-block .main-nav:after{
 #content-block .resume.info-block{
 	border-top: 3px solid #FBAD09;
 }
-#content-block .contact.info-block{
+#content-block .contacts.info-block{
 	border-top: 3px solid #EF6A00;
 }
 
