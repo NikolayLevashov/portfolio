@@ -11,16 +11,9 @@ $(window).on('load', function(){
 
 	var xColor = getCookie('color');
 
-	$('body').removeClass();
 
-	if ( xColor != 'grey' || xColor != 'light' )
-	{
-		$('body').addClass('grey');	
-	}
-	else
-	{
-		$('body').addClass( getCookie('color') );	
-	}
+	$('body').removeClass();
+	$('body').addClass( getCookie('color') );
 	
 });
 
