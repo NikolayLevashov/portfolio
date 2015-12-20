@@ -1,3 +1,25 @@
+$(document).on('load', function(){
+	
+	function getCookie(name)
+	{
+  	var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  	));
+  	return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+	var resCookie = getCookie('color');
+
+	$('body').removeClass();
+	if ( resCookie == 'underfine' )
+	{
+		$('body').addClass('grey');
+	}
+	else
+	{
+		$('body').addClass( resCookie + '' );
+	}
+});
+
 $(document).ready(function(){
 	$('.nav-block').find('a').click(function(){
 
