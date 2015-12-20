@@ -296,16 +296,16 @@ display: block;
 }
 
 #content-block .about.info-block{
-	border: 2px solid #0082AA;
+	border-top: 3px solid #0082AA;
 }
 #content-block .portfolio.info-block{
-	border: 2px solid #70CC18;
+	border-top: 3px solid #70CC18;
 }
 #content-block .resume.info-block{
-	border: 2px solid #FBAD09;
+	border-top: 3px solid #FBAD09;
 }
 #content-block .contact.info-block{
-	border: 2px solid #EF6A00;
+	border-top: 3px solid #EF6A00;
 }
 
 #footer-block{

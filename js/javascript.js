@@ -2,26 +2,24 @@ $(document).on('load', function(){
 	
 	function getCookie(name)
 	{
-  	var matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  	));
-  	return matches ? decodeURIComponent(matches[1]) : undefined;
+  		var matches = document.cookie.match(new RegExp(
+    	"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  		));
+  		return matches ? decodeURIComponent(matches[1]) : undefined;
+  		return matches ? decodeURIComponent(matches[1]) : 'grey';
 	}
 
 	$('body').removeClass();
 
-	if ( getCookie('color') == 'undefined' )
+	if ( getCookie('color') != 'grey' || getCookie('color') != 'light' )
 	{
-		console.log ( 'кука не определена' )
-		console.log ( getCookie('color') )
-		$('body').addClass('grey');
+		$('body').addClass('grey');	
 	}
 	else
 	{
-		console.log ( 'кука определена' )
-		console.log ( getCookie('color') )
-		$('body').addClass( getCookie('color') );
+		$('body').addClass( getCookie('color') );	
 	}
+	
 });
 
 $(document).ready(function(){
@@ -55,18 +53,17 @@ $(document).ready(function(){
 	});
 
 	$('#head-block').find('.color').click(function(){
-		if( $(this).hasClass('grey') )
+
+		console.log('asd')
+
+		if( $('body').hasClass('grey') )
 		{
-			$(this).removeClass('grey');
-			$(this).addClass('light');
 			$('body').removeClass('grey');
 			$('body').addClass('light');
 			setCookie('color', 'light', '/', 'nikolaylevashov.16mb.com' );
 		}
 		else
 		{
-			$(this).removeClass('light');
-			$(this).addClass('grey');
 			$('body').removeClass('light');
 			$('body').addClass('grey');
 			setCookie('color', 'grey', '/', 'nikolaylevashov.16mb.com' );
