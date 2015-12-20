@@ -1,4 +1,4 @@
-$(document).onload(function(){
+$(document).on('load', function(){
 	
 	function getCookie(name)
 	{
