@@ -12,6 +12,8 @@ $(document).on('load', function(){
 
 	if ( getCookie('color') == 'undefined' )
 	{
+		console.log ( 'кука не определена' )
+		console.log ( getCookie('color') )
 		$('body').addClass('grey');
 	}
 	else
