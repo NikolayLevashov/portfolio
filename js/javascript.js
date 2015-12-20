@@ -7,18 +7,16 @@ $(document).on('load', function(){
   	));
   	return matches ? decodeURIComponent(matches[1]) : undefined;
 	}
-	var resCookie = getCookie('color');
-	getCookie('color')
 
 	$('body').removeClass();
 
-	if ( resCookie == 'undefined' )
+	if ( getCookie('color') == 'undefined' )
 	{
 		$('body').addClass('grey');
 	}
 	else
 	{
-		$('body').addClass( resCookie + '' );
+		$('body').addClass( getCookie('color') );
 	}
 });
 
