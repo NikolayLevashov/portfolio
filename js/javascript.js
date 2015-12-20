@@ -8,9 +8,11 @@ $(document).on('load', function(){
   	return matches ? decodeURIComponent(matches[1]) : undefined;
 	}
 	var resCookie = getCookie('color');
+	getCookie('color')
 
 	$('body').removeClass();
-	if ( resCookie == 'underfine' )
+
+	if ( resCookie == 'undefined' )
 	{
 		$('body').addClass('grey');
 	}
