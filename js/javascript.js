@@ -1,22 +1,3 @@
-$(window).on('load', function(){
-	
-	function getCookie(name)
-	{
-  		var matches = document.cookie.match(new RegExp(
-    	"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  		));
-  		// return matches ? decodeURIComponent(matches[1]) : undefined;
-  		return matches ? decodeURIComponent(matches[1]) : 'grey';
-	}
-
-	var xColor = getCookie('color');
-
-
-	$('body').removeClass();
-	$('body').addClass( getCookie('color') );
-	
-});
-
 $(document).ready(function(){
 	$('.nav-block').find('a').click(function(){
 
@@ -28,10 +9,6 @@ $(document).ready(function(){
 		$('body').addClass('static');
 
 		setTimeout( function() { $('#content-block').addClass('active'); } , 900)
-
-		// $('#content-block').addClass('active');
-
-		console.log ( index )
 
 		$('#content-block').find('.info-block-wrapper').addClass('active');
 
@@ -99,3 +76,11 @@ $(document).ready(function(){
 }
 
 });
+
+function getCookie(name)
+{
+	var matches = document.cookie.match(new RegExp(
+   	"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+	));
+	return matches ? decodeURIComponent(matches[1]) : 'grey';
+}
