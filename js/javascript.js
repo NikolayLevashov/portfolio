@@ -1,17 +1,19 @@
-$(document).on('load', function(){
+$(window).on('load', function(){
 	
 	function getCookie(name)
 	{
   		var matches = document.cookie.match(new RegExp(
     	"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
   		));
-  		return matches ? decodeURIComponent(matches[1]) : undefined;
+  		// return matches ? decodeURIComponent(matches[1]) : undefined;
   		return matches ? decodeURIComponent(matches[1]) : 'grey';
 	}
 
+	var xColor = getCookie('color');
+
 	$('body').removeClass();
 
-	if ( getCookie('color') != 'grey' || getCookie('color') != 'light' )
+	if ( xColor != 'grey' || xColor != 'light' )
 	{
 		$('body').addClass('grey');	
 	}
