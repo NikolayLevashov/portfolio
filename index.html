@@ -14,53 +14,60 @@
 
     <link href="style/style.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
     <script src="js/javascript.js"></script>
     
 </head>
 
-<body>
+<body class='light'>
 
     <div class='wrapper'>
 
         <div id="head-block">
-            <p class="head-title">Левашов Николай</p>
+            <p class="head-title">Левашов Николай</p><br>
             <p class="info">html верстальщик / junior front-end разработчик</p>
+
+            <div class='color'></div>
+
         </div>
 
-        <div id='content-block' class='mainpage'>
-            <div class="main-block">
-                <a href="#about">
-                <div class="about-block main-nav">
-                    <p>About</p>
-                    <span class='line'></span>
-                    <p>Немного обо мне</p>
-                </div>
-                </a>
-                <a href="#portfolio">
-                <div class="portfolio-block main-nav">
-                    <p>Portfolio</p>
-                    <span class='line'></span>
-                    <p>Примеры работ</p>
-                </div>
-                </a>
-                <a href="#resume">
-                <div class="resume-block main-nav">
-                    <p>Resume</p>
-                    <span class='line'></span>
-                    <p>Моё резюме</p>
-                </div>
-                </a>
-                <a href="#contacts">
-                <div class="contact-block main-nav">
-                    <p>Contacts</p>
-                    <span class='line'></span>
-                    <p>Мои контакты</p>
-                </div>
-                </a>
+        <div class="nav-block">
+            <a href="#about">
+            <div class="about-block main-nav">
+                <!-- <p>About</p>
+                <span class='line'></span> -->
+                <p>Немного обо мне</p>
+                <img src='images/info-icon.png'>
             </div>
+            </a>
+            <a href="#portfolio">
+            <div class="portfolio-block main-nav">
+                <!-- <p>Portfolio</p>
+                <span class='line'></span> -->
+                <p>Примеры работ</p>
+                <img src='images/portfolio-icon.png'>
+            </div>
+            </a>
+            <a href="#resume">
+            <div class="resume-block main-nav">
+                <!-- <p>Resume</p>
+                <span class='line'></span> -->
+                <p>Моё резюме</p>
+                <img src='images/resume-icon.png'>
+            </div>
+            </a>
+            <a href="#contacts">
+            <div class="contact-block main-nav">
+                <!-- <p>Contacts</p>
+                <span class='line'></span> -->
+                <p>Мои контакты</p>
+                <img src='images/contacts-icon.png'>
+            </div>
+            </a>
+        </div>
 
-            <br clear='both'>
+        <div id='content-block'>
 
             <div class="info-block-wrapper">
                 <div class="about info-block">
@@ -81,8 +88,6 @@
             </div>
             
         </div>
-
-        <br clear='both'>
 
         <footer id='footer-block'>
             
