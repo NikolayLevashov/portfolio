@@ -16,7 +16,8 @@ $(document).onload(function(){
 	}
 	else
 	{
-		console.log ( кука определена )
+		console.log ( 'кука определена' )
+		console.log ( getCookie('color') )
 		$('body').addClass( getCookie('color') );
 	}
 });
