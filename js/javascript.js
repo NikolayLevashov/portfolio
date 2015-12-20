@@ -1,4 +1,4 @@
-$(document).on('load', function(){
+$(document).onload(function(){
 	
 	function getCookie(name)
 	{
@@ -16,6 +16,7 @@ $(document).on('load', function(){
 	}
 	else
 	{
+		console.log ( кука определена )
 		$('body').addClass( getCookie('color') );
 	}
 });
