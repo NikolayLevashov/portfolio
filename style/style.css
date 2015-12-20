@@ -279,11 +279,11 @@ body.light .nav-block .main-nav:after{
 }
 
 #content-block .info-block-wrapper.active{
-display: block;
+	display: block;
 }
 
 #content-block .info-block{
-	width: 99%;
+	width: 100%;
 	margin: 0px auto;
 	height: auto;
 	position: absolute;
