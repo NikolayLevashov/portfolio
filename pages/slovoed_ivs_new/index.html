@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="images/favicon.ico">
+    
+    <title>My Slovoed</title>
+
+    <link href="style/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/javascript.js"></script>
+    
+  </head>
+
+    <body>
+    <div class='wrapper'>
+
+        <nav id='head-nav'>
+            <div class='nav-wrapper'>
+                <div class='nav-logo'>
+                    <a href='./index.html'>
+                        <span class='logo'></span>
+                        <span>Slovoed</span>
+                    </a>
+                </div>
+                <div class='nav-menu'>
+                    <div class='user-menu main-button'>
+                        <div class='user blue-bg'>
+                            <span class='icon user-icon'></span>
+                            <span class="user-name">John Smith</span>
+                            <div class='tringle'></div>
+                        </div>
+                        <div class='user-popup nav-popup'>
+                            <a href='./pages/account.html'>My Account</a>
+                            <a href='./pages/products.html'>My products</a>
+                            <a href='./pages/change_password.html'>Change password</a>
+                            <a href='./index.html'>Log out</a>
+                        </div>
+                    </div>
+                    <div class='language-menu main-button'>
+                        <div class='language blue-bg'>
+                            <span class='icon language-icon'></span>
+                            <span class="chosen-language">English</span>
+                            <div class='tringle'></div>
+                        </div>
+                        <div class='language-popup nav-popup'>
+                            <a href='#'>Italian</a>
+                            <a href='#'>French</a>
+                            <a href='#'>German</a>
+                            <a href='#'>Spanish</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='mob-nav-button'>
+                    <span class='black-line'></span>
+                    <span class='black-line'></span>
+                </div>
+            </div>  
+        </nav>
+        <div id='mainpage' class='content pages'>
+
+            <div class='mob-nav-menu-wrapper'>
+                <ul>
+                    <li class='title'><span class='icon user-icon'></span>John Smith</li>
+                        <ul class='two-lvl-menu'>
+                            <li><a href='./pages/account.html'>My Account</a></li>
+                            <li><a href='./pages/products.html'>My products</a></li>
+                            <li><a href='./pages/change_password.html'>Change password</a></li>
+                            <li><a href='./index.html'>Log out</a></li>
+                        </ul>
+                    <li class='title'><span class='icon language-icon'></span>English</li>
+                        <ul class='two-lvl-menu'>
+                            <li><a href='#'>Italian</a></li>
+                            <li><a href='#'>French</a></li>
+                            <li><a href='#'>German</a></li>
+                            <li><a href='#'>Spanish</a></li>
+                        </ul>
+                </ul>
+            </div>
+
+            <div class='myslovoed'>
+                <span class='myslovoed-logo'></span>
+                <h1>My Slovoed</h1>
+            </div>
+
+            <br clear='both'>
+
+            <div class="form-block">
+                <ul>
+                    <li class='login-block active'>
+                        <a href='#'>
+                            <span class="title">Sign in</span>
+                        </a>
+                    </li>
+                    <li class='join-block'>
+                        <a href='#'>
+                            <span class="title">Join</span>
+                        </a>
+                    </li>
+
+                    <br clear='both'>
+
+                    <div class='login-form-block forms-block active'>
+                        <form action="" method="POST" class='login-form error' onkeyup="checkLoginForm()">
+                            <lable>Login</lable>
+                            <input onchange='checkLoginForm()' type="email" name='email' class='email error-input' placeholder='john.smith@mail.com' >
+                            <lable>Password</lable>
+                            <input class='pass error-input' onchange='checkLoginForm()' type="password" name='password' placeholder='******'>
+
+                            <a class="forgotpass" href="./pages/reset_password.html">Forgot your password?</a>
+                        </form>
+
+                        <div class='loading-block'></div>
+                        <input type="button" class='button' value="Sign in" disabled="disable">
+                        <br clear='both'>
+                        <p class="error-text outform">Your login details are incorrect. Please try again or click on "Forgot your password?".</p>
+
+                    </div>
+
+                    <div class='join-form-block forms-block' >
+                        <form action="" method="POST" class='join-form error' onkeyup="checkJoinForm()">
+                            <div class='f-l-name'>
+                                <div class='first-name'>
+                                    <lable>First name *</lable>
+                                    <input type="text" name='name' class='firstname error-input' placeholder='John' autocomplete="off">
+
+                                    <p class="error-text">Please enter your first name</p>
+
+                                </div>
+
+                                <div class='last-name'>
+                                    <lable>Last name *</lable>
+                                    <input type="text" name='lastname' class='lastname error-input' placeholder='Smith' autocomplete="off">
+
+                                    <p class="error-text">Please enter your last name</p>
+
+                                </div>
+                            </div>
+                            <br clear='both'>
+                            <lable>Email *</lable>
+                            <input onchange='checkJoinForm()' type="email" name='email' class='email' placeholder='john.smith@mail.com' autocomplete="off">
+                            <p class="error-text">Please enter your email</p>
+                            <p class="error-text">Customer with such email has been registered</p>
+                            <lable>Password</lable>
+                            <input type="password" name='password' class='pass' placeholder='******' autocomplete="off">
+                            <span class='info'>Use a minimum of 6 characters, at least one unique number and at least one unique capital and lowercase letter.</span>
+
+                            <p class="error-text">Please enter your password</p>
+                            <p class="error-text">Your password must have a minimum of 6 chatacters, one or more letters, capital letters and digits</p>
+
+                            <lable>Confirm your password</lable>
+                            <input type="password" name='password' class='confpass' placeholder='******' autocomplete="off">
+
+                            <p class="error-text">Please confirm your password</p>
+                            <p class="error-text">Your passwords do not mutch.Please try again</p>
+
+                            <div class="checkboxes">
+                                <div class="inline">
+                                    <input class='error-input' type="checkbox" id="check1" onclick="checkJoinForm()">
+                                    <label for="check1">Please, read and argee with our <a class='checkboxhref' href='http://slovoed.com/en/terms' target='_black'>Terms and Conditions</a> to register</label>
+
+                                    <p class="error-text">You must agree to Terms and conditions to proceed</p>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class='loading-block'></div>
+                        <input type="button" class='button' value="Join" disabled="disable" onclick="checkPostjoinform()">
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class='footer-height'></div>
+
+        <footer id='footer'>
+            <div class='footer-content'>
+                <div class='left-side'>
+                    <img src='images/logo_paragon.png'>
+                    <a href='#'>Privacy Policy</a>
+                    <a href='#'>Terms and Conditions</a>
+                    <a href='#'>Support</a>
+                </div>
+                <div class='right-side'>
+                    <span>&copy;Paragon Software 1998-2015, Paragon Software Group.<br>All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</html>

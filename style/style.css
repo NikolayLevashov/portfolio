@@ -26,7 +26,7 @@ body.light{
 	background-color: #DEDEDE;
 }
 
-@media screen and (max-width: 480px){
+/*@media screen and (max-width: 480px){
 	
 	.wrapper{
 		max-width: 460px;
@@ -62,7 +62,7 @@ body.light{
 		min-width: 960px;
 	}
 
-}
+}*/
 
 .wrapper{
 	width: 100%;
@@ -356,6 +356,32 @@ body.light #content-block .contacts.info-block a{
 	color: #2B9CA2;
 	text-shadow: 1px 1px 2px #CACACA;
 }
+/**/
+#content-block .resume.info-block a{
+	width: 128px;
+	margin: 0px auto;
+	line-height: 175px;
+	text-decoration: none;
+	display: block;
+	margin-top: 25px;
+}
+#content-block .resume.info-block a:hover{
+	text-decoration: underline;
+}
+body.grey #content-block .resume.info-block a{
+	color: #C7EDFC;
+	text-shadow: 1px 1px 2px black;
+}
+body.light #content-block .resume.info-block a{
+	color: #2B9CA2;
+	text-shadow: 1px 1px 2px #CACACA;
+}
+#content-block .resume.info-block img{
+	display: block;
+	float: left;
+	margin: 0px auto;
+}
+/**/
 #content-block .contacts.info-block img{
 	display: block;
 	float: left;

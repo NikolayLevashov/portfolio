@@ -1,127 +1,93 @@
-﻿<!doctyle HTML>
+﻿<!DOCTYPE HTML>
 
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 
-<head>
-    <title>slovoed IVS</title>
+  <head>
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="../images/favicon.ico">
+    
+    <title>My Slovoed</title>
 
-    <link rel="stylesheet" href="../style/style.css" type="text/css">
-
-    <script type="text/javascript" src="../javascript/jquery.js"></script>
-    <script type="text/javascript" src="../javascript/javascript.js"></script>
-
-</head>
+    <link href="../style/style.css" rel="stylesheet">
+    
+  </head>
 
 <body>
 
-    <div class="wrapper black-head-wrapper products-wrapper">
+    <div class="wrapper">
 
-        <div class="head-wrapper">
-
-            <div class="head">
-
-                <div class="logo">
-                    <a href="../index.html"><img class="logo-img" src="../images/logo.png"></a>
+        <nav id='head-nav'>
+            <div class='nav-wrapper'>
+                <div class='nav-logo'>
+                    <a href='../index.html'>
+                        <span class='logo'></span>
+                        <span>Slovoed</span>
+                    </a>
                 </div>
-
-                <div class="social-buttons">
-                    <p>Join us at:</p>
-                    <a href="https://www.facebook.com/SlovoedLanguageUniverse"><img src="../images/fb.png"></a>
-                    <a href="#"><img src="../images/vk.png"></a>
-                </div>
-
-                <div class="grey-menu">
-
-                    <ul class="menu">
-
-                        <li class="current"><a href="#">Организациям</a>
-                            <ul class="menuLevelTwo organization">
-                                <li class="menuColumn">
-                                    <ul>
-                                        <li><a href="../index.html#school">Учебным заведениям</a></li>
-                                        <li><a href="../index.html#coop">Корпоративным клиентам</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li><a href="http://slovoed.com/support#ios">Поддержка / FAQ</a></li>
-
-                        <li><a href="http://slovoed.com/company">О компании</a>
-                            <ul class="menuLevelTwo aboutBlock">
-                                <li class="menuColumn">
-                                    <ul>
-                                        <li><a href="http://slovoed.com/about">О нас</a></li>
-                                        <li><a href="http://slovoed.com/contacts">Контакты</a></li>
-                                        <li><a href="http://slovoed.com/projects">Проекты</a></li>
-                                        <li><a href="http://slovoed.com/news">Новости</a></li>
-                                        <li><a href="http://slovoed.com/reviews">Пресса о нас</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li><a href="http://slovoed.com/dictionaries">Словари</a></li>
-                    </ul>
-
-                </div>
-
-                <div class="user-block active">
-
-                    <div class="user-name">
-                        <img class="face-img" src="../images/face_img.png">
-                        <span>John Smith</span>
-                        <img class="triangle" src="../images/triangle.png">
+                <div class='nav-menu'>
+                    <div class='user-menu main-button'>
+                        <div class='user blue-bg'>
+                            <span class='icon user-icon'></span>
+                            <span class="user-name">John Smith</span>
+                            <div class='tringle'></div>
+                        </div>
+                        <div class='user-popup nav-popup'>
+                            <a href='./account.html'>My Account</a>
+                            <a href='./products.html'>My products</a>
+                            <a href='./change_password.html'>Change password</a>
+                            <a href='../index.html'>Log out</a>
+                        </div>
                     </div>
-
-                    <div class="user-menu">
-                        <ul>
-                            <li><a href="./account.html">My account</a></li>
-                            <li><a href="./products.html">My products</a></li>
-                            <li><a href="./change_password.html">Change password</a></li>
-                            <li><a href="../index.html">Log out</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="language-choice">
-
-                    <div class="main-language">
-                        <img class="white-tringle" src="../images/white-tringle.png">
-                        <img class="flag" src="../images/ru-flag.png">
-                    </div>
-
-                    <div class="language-popup">
-                        <a href="../en/index.html"><img class="flag" src="../images/en-flag.png"></a>
-                        <a href="../en/index.html"><img class="flag" src="../images/en-flag.png"></a>
-                        <a href="../en/index.html"><img class="flag" src="../images/en-flag.png"></a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="black-head-banner-wrapper">
-                <div class="black-head-banner">
-                    <div class="black-head-nav">
-                        <div>
-                            <h2 class="dark">My Products</h2>
+                    <div class='language-menu main-button'>
+                        <div class='language blue-bg'>
+                            <span class='icon language-icon'></span>
+                            <span class="chosen-language">English</span>
+                            <div class='tringle'></div>
+                        </div>
+                        <div class='language-popup nav-popup'>
+                            <a href='#'>Italian</a>
+                            <a href='#'>French</a>
+                            <a href='#'>German</a>
+                            <a href='#'>Spanish</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="blue-title-line">
-                    <span>Activate new product</span>
+                <div class='mob-nav-button'>
+                    <span class='black-line'></span>
+                    <span class='black-line'></span>
                 </div>
+            </div>  
+        </nav>
 
+        <div id='products' class="content pages">
+
+            <div class='mob-nav-menu-wrapper'>
+                <ul>
+                    <li class='title'><span class='icon user-icon'></span>John Smith</li>
+                        <ul class='two-lvl-menu'>
+                            <li><a href='./account.html'>My Account</a></li>
+                            <li><a href='./products.html'>My products</a></li>
+                            <li><a href='./change_password.html'>Change password</a></li>
+                            <li><a href='../index.html'>Log out</a></li>
+                        </ul>
+                    <li class='title'><span class='icon language-icon'></span>English</li>
+                        <ul class='two-lvl-menu'>
+                            <li><a href='#'>Italian</a></li>
+                            <li><a href='#'>French</a></li>
+                            <li><a href='#'>German</a></li>
+                            <li><a href='#'>Spanish</a></li>
+                        </ul>
+                </ul>
             </div>
 
-        </div>
-
-        <br clear="both">
-
-        <div class="content products">
+            <div class="blue-title-line">
+                <span class='blue-line'></span>
+                <span class='blue-title'>Products information</span>
+            </div>
 
             <div class="activate-code-block">
 
@@ -380,23 +346,24 @@
         </div>
 
         <br clear="both">
+        
+        <footer id='footer'>
+            <div class='footer-content'>
+                <div class='left-side'>
+                    <img src='images/logo_paragon.png'>
+                    <a href='#'>Privacy Policy</a>
+                    <a href='#'>Terms and Conditions</a>
+                    <a href='#'>Support</a>
+                </div>
+                <div class='right-side'>
+                    <span>&copy;Paragon Software 1998-2015, Paragon Software Group.<br>All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
 
-        <div id="footer">
-            <script src="http://s7.addthis.com/js/250/addthis_widget.js" type="text/javascript"></script>
-            <div id="footerMenu">
-                <a href="http://slovoed.com/about">About us</a>
-                <a href="http://slovoed.com/contacts">Contacts</a>
-                <a href="http://slovoed.com/news">News</a>
-                <a href="http://slovoed.com/terms">Terms</a>
-                <a href="http://slovoed.com/privacy">Privacy</a>
-            </div>
-            <div id="copyright">
-                © Paragon Software 1998-2014, Paragon Software Group.
-                <br>
-                All rights reserved.
-            </div>
-        </div>
     </div>
 </body>
 
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/javascript.js"></script>
