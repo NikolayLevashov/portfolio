@@ -1,0 +1,101 @@
+#wrapper #languege{
+    width: 65px;
+    height: 25px;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+}
+
+#wrapper #languege .arrow{
+    width: 12px;
+    height: auto;
+    position: relative;
+    left: 5px;
+    cursor: pointer;
+}
+
+#wrapper #languege .flag{
+    width: 25px;
+    height: auto;
+    position: relative;
+    top: 3px;
+    left: 15px;
+
+    border: 1px solid #ccc;
+}
+
+#wrapper #languege .flag:hover{
+    cursor: pointer;
+}
+
+#wrapper #choselanguage .white{
+    background-color: white;
+}
+
+#wrapper #choselanguage .grey{
+    background-color: #eee;
+}
+
+#wrapper #choselanguage .white a{
+     color: black;
+ }
+
+#wrapper #choselanguage .grey a{
+    color: black;
+}
+
+#wrapper #choselanguage .white:hover a{
+    color: white;
+}
+
+#wrapper #choselanguage .grey:hover a{
+    color: white;
+}
+
+#wrapper #choselanguage .white:hover{
+    background-color: #395B40;
+}
+
+#wrapper #choselanguage .grey:hover{
+    background-color: #395B40;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#wrapper #choselanguage{
+    position: fixed;
+    top: 60px;
+    right: 7px;
+    box-shadow: 0px 0px 75px black;
+    -webkit-box-shadow: 0px 0px 75px black;
+    -moz-box-shadow: 0px 0px 75px black;
+    display: none;
+}
+
+#wrapper #choselanguage img{
+    width: 25px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border: 1px solid #ccc;
+}
+
+#wrapper #choselanguage a{
+    text-decoration: none;
+    position: relative;
+    top: -2px;
+}
+
+#wrapper #choselanguage a:last-of-type{
+    top: -5px;
+    left: -3px;
+}
+
+#wrapper #choselanguage li{
+    list-style: none;
+    width: 110px;
+    height: 35px;
+}

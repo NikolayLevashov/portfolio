@@ -1,0 +1,589 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+body{
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100%;
+    min-width: 950px;
+    overflow: hidden;
+    background: url(../images/pageBG.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content{
+    width: 100%;
+    max-width: 950px;
+    min-height: 100%;
+    margin: 0px auto;
+
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content #logo {
+    background: url(../images/logo_en.png) no-repeat;
+    width: 447px;
+    height: 222px;
+    margin: 25px auto 25px auto;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content #logoDescription{
+    max-width: 950px;
+    width: auto;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+}
+
+#content #logoDescription .title {
+    font-size: 35px;
+}
+
+#content #logoDescription .mainText {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content #menu{
+    width: 819px;
+    height: 56px;
+    margin: 30px auto 20px auto;
+}
+
+#content #menu .button{
+     border-width: 2px;
+     border-color: rgb( 255, 255, 255 );
+     border-style: solid;
+     border-radius: 25px;
+     float: left;
+     margin-right: 13px;
+    cursor: pointer;
+    position: relative;
+ }
+
+#content #menu .button:last-child{
+    margin-right: 0px;
+}
+
+#content #menu .button:hover{
+     background-color: rgba( 255, 255, 255, 0.231 );
+}
+
+#content #menu .button.active{
+    border: none;
+    border-radius: 25px;
+    background-color: rgb( 255, 255, 255 );
+}
+
+#content #menu .button.active p{
+    color: #416049;
+}
+
+#content #menu .button p{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+#content #menu #ios {
+    width: 84px;
+    height: 56px;
+}
+
+#content #menu #mac {
+    width: 99px;
+    height: 56px;
+}
+
+#content #menu #android {
+    width: 161px;
+    height: 56px;
+}
+
+#content #menu #winphone {
+    width: 227px;
+    height: 56px;
+}
+
+#content #menu #win8 {
+    width: 176px;
+    height: 56px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content #devices{
+    width: 50%;
+    height: 697px;
+    float: left;
+    position: relative;
+    overflow: visible;
+}
+
+#content #devices .image{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    overflow: visible;
+    opacity: 0;
+}
+
+#content #devices .image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+#content #devices #ios{
+    width: 535px;
+    height: 697px;
+}
+
+#content #devices #mac{
+    width: 1077px;
+    height: 640px;
+}
+
+#content #devices #android{
+    width: 876px;
+    height: 644px;
+}
+
+#content #devices #winphone{
+    width: 402px;
+    height: 674px;
+}
+
+#content #devices #win8{
+    width: 1021px;
+    height: 516px;
+}
+
+#content #devices .image img{
+    position: absolute;
+}
+
+#content #devices image.active {
+    opacity: 1;
+}
+
+#content #devices #ios img {
+    top: 0px;
+    left: 0px;
+}
+
+#content #devices #mac img {
+    top: 35px;
+    left: 120px;
+}
+
+#content #devices #android img {
+    top: 55px;
+    left: 30px;
+}
+
+#content #devices #winphone img {
+    top: 0px;
+    left: -30px;
+}
+
+#content #devices #win8 img {
+    top: 110px;
+    left: 90px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content #dictionariesBlocks{
+    width: 470px;
+    height: 727px;
+    float: right;
+    position: relative;
+    z-index: 2;
+}
+
+/*#content #dictionariesBlocks .block{*/
+    /*width: 470px;*/
+    /*max-height: 727px;*/
+    /*background: url(../images/bgBlock.png);*/
+    /*border-radius: 20px;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*overflow-y: auto;*/
+    /*outline:none;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*#content #dictionariesBlocks .block.active{*/
+    /*opacity: 1;*/
+    /*z-index: 3;*/
+/*}*/
+
+#content #dictionariesBlocks .block{
+    width: 470px;
+    max-height: 727px;
+    background: url(../images/bgBlock.png);
+    border-radius: 20px;
+    position: absolute;
+    top: 0px;
+    overflow-y: auto;
+    outline:none;
+    /*opacity: 0;*/
+    z-index: 3;
+}
+
+#content #dictionariesBlocks .block.active{
+    /*opacity: 1;*/
+    /*z-index: 3;*/
+}
+
+#content #dictionariesBlocks .block .descriptions{
+    width: 412px;
+    height: auto;
+    margin: 20px auto 0px auto;
+}
+
+#content #dictionariesBlocks .block .descriptions img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+}
+
+#content #dictionariesBlocks .block .descriptions p {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -5px;
+}
+
+#content #dictionariesBlocks .block .descriptions a {
+    display: block;
+    width: 293px;
+    height: 44px;
+    position: relative;
+    float: right;
+    border-width: 2px;
+    border-color: rgb( 151, 195, 11 );
+    border-style: solid;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#content #dictionariesBlocks .block .descriptions a img{
+    width: 42px;
+    height: 26px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+#content #dictionariesBlocks .block .descriptions a .red{
+    color: #D75134;
+    font-size: 20px;
+    text-decoration: line-through;
+    margin-left: 40px;
+    position: relative;
+    top: 5px;
+}
+
+#content #dictionariesBlocks .block .descriptions a .green{
+    color: rgb( 151, 195, 11 );
+    font-size: 25px;
+    margin-left: 25px;
+    position: relative;
+    top: 5px;
+}
+
+#content #dictionariesBlocks .block .descriptions .whiteLine {
+    width: 100%;
+    height: 2px;
+    background: url(../images/whiteLine.png) no-repeat;
+    background-position: left bottom;
+    position: relative;
+    left: 13px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#content #instruction{
+    width: 210px;
+    height: 218px;
+    position: relative;
+    top: 630px;
+    z-index: 4;
+}
+
+#content #instruction span{
+    width: 29px;
+    height: 29px;
+    display: block;
+    background: url(../images/info.png);
+    position: absolute;
+    top: 75px;
+    left: 185px;
+}
+
+#content #instruction p{
+    font-size: 21px;
+    color: white;
+    position: absolute;
+    top: 75px;
+    left: 220px;
+    width: 247px;
+    cursor: pointer;
+    border-bottom: 2px dashed white;
+}
+
+#content #instruction p:hover{
+    border-bottom: 2px solid white;
+}
+
+#content #instruction .instructionBlock{
+    width: 210px;
+    height: 218px;
+    background: url(../images/instractionLogo.png);
+    position: absolute;
+    opacity: 0;
+}
+
+#content #instruction #ios.instructionBlock{
+    background: url(../images/instractionLogoios.png);
+    background-repeat: no-repeat;
+}
+
+#content #instruction #win8.instructionBlock{
+    background: url(../images/instractionLogoWin8.png);
+    background-repeat: no-repeat;
+}
+
+#content #instruction .instructionBlock.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+#content #instruction .instructionBlock .descriptionBlockGrey{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+#content #instruction .instructionBlock .descriptionBlockGrey{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+#content #instruction #ios.instructionBlock .descriptionBlockWhite{
+    border-radius: 30px;
+    background-color: rgb( 244, 244, 244 );
+    box-shadow: 0px 0px 49px 14px rgb( 0, 0, 0 );
+    width: 730px;
+    height: 595px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -365px;
+    margin-top: -297.5px;
+}
+
+#content #instruction #ios.instructionBlock .descriptionBlockWhite img {
+    float: left;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+#content #instruction #ios.instructionBlock .descriptionBlockWhite img:first-child {
+    margin-top: 30px;
+}
+
+#content #instruction #ios.instructionBlock .descriptionBlockWhite p{
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    float: left;
+    cursor: default;
+    left: 0px;
+    width: auto;
+}
+
+#content #instruction #ios.instructionBlock .descriptionBlockWhite p:first-of-type{
+    margin-top: 42px;
+}
+
+#content #instruction #ios.instructionBlock .descriptionBlockWhite p:last-of-type{
+    margin-top: 1px;
+}
+
+#content #instruction #mac.instructionBlock .descriptionBlockWhite{
+    border-radius: 30px;
+    background-color: rgb( 244, 244, 244 );
+    box-shadow: 0px 0px 49px 14px rgb( 0, 0, 0 );
+    width: 934px;
+    height: 594px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -467px;
+    margin-top: -297px;
+}
+
+#content #instruction #mac.instructionBlock .descriptionBlockWhite img {
+    display: block;
+    margin: 28px auto 0px auto;
+}
+
+#content #instruction #android.instructionBlock .descriptionBlockWhite{
+    border-radius: 30px;
+    background-color: rgb( 244, 244, 244 );
+    box-shadow: 0px 0px 49px 14px rgb( 0, 0, 0 );
+    width: 730px;
+    height: 376px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -365px;
+    margin-top: -188px;
+}
+
+#content #instruction #android.instructionBlock .descriptionBlockWhite img {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#content #instruction #android.instructionBlock .descriptionBlockWhite p {
+    color: black;
+    font-size: 20px;
+    width: auto;
+    position: absolute;
+    border: none;
+    text-decoration: none;
+    cursor: default;
+}
+
+#content #instruction #android.instructionBlock .descriptionBlockWhite p:first-of-type {
+    top: 78px;
+    left: 380px;
+}
+
+#content #instruction #android.instructionBlock .descriptionBlockWhite p:last-of-type {
+    top: 250px;
+    left: 380px;
+}
+
+#content #instruction #winphone.instructionBlock{
+    display: none;
+}
+
+#content #instruction #winphone.instructionBlock .descriptionBlockWhite{
+    border-radius: 30px;
+    background-color: rgb( 244, 244, 244 );
+    box-shadow: 0px 0px 49px 14px rgb( 0, 0, 0 );
+    width: 730px;
+    height: 376px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -365px;
+    margin-top: -188px;
+}
+
+#content #instruction #winphone.instructionBlock .descriptionBlockWhite img {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#content #instruction #winphone.instructionBlock .descriptionBlockWhite p {
+    color: black;
+    font-size: 20px;
+    width: auto;
+    position: absolute;
+    border: none;
+    text-decoration: none;
+    cursor: default;
+}
+
+#content #instruction #winphone.instructionBlock .descriptionBlockWhite p:first-of-type {
+    top: 78px;
+    left: 380px;
+}
+
+#content #instruction #winphone.instructionBlock .descriptionBlockWhite p:last-of-type {
+    top: 250px;
+    left: 380px;
+}
+
+#content #instruction #win8.instructionBlock .descriptionBlockWhite{
+    border-radius: 30px;
+    background-color: rgb( 244, 244, 244 );
+    box-shadow: 0px 0px 49px 14px rgb( 0, 0, 0 );
+    width: 934px;
+    height: 594px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -467px;
+    margin-top: -297px;
+}
+
+#content #instruction #win8.instructionBlock .descriptionBlockWhite img {
+    display: block;
+    margin: 10px auto 0px auto;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+#wrapper #footer{
+    width: 100%;
+    height: 60px;
+    margin-top: 105px;
+    background-color: #795835;
+}
+
+#wrapper #footer p{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.slimScrollDiv{
+    position: absolute !important;
+    opacity: 0;
+}
+
+.slimScrollDiv.active{
+    opacity: 1;
+}

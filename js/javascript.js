@@ -3,18 +3,22 @@ $(document).ready(function(){
 
 		$('.nav-block').find('a').removeClass('active');
 		$(this).addClass('active');
-
 		var index = $(this).index();
-
 		$('body').addClass('static');
-
-		setTimeout( function() { $('#content-block').addClass('active'); } , 900)
-
-		$('#content-block').find('.info-block-wrapper').addClass('active');
-
+		setTimeout( function()
+		{ 
+			$('#content-block').addClass('active'); 
+		} , 1);
 		$('#content-block').find('.info-block').removeClass('active');
-		$('#content-block').find('.info-block').eq(index).addClass('active');
-		
+		setTimeout( function()
+		{	
+			$('#content-block').find('.info-block-wrapper').removeClass('active');
+			$('#content-block').find('.info-block-wrapper').eq(index).addClass('active');
+		}, 200);
+		setTimeout( function()
+		{	
+			$('#content-block').find('.info-block').eq(index).addClass('active');
+		}, 250);
 	});
 
 	$('#head-block').find('p').click(function(){
@@ -25,8 +29,6 @@ $(document).ready(function(){
 	});
 
 	$('#head-block').find('.color').click(function(){
-
-		console.log('asd')
 
 		if( $('body').hasClass('grey') )
 		{
@@ -44,9 +46,7 @@ $(document).ready(function(){
 
 	function setCookie(name, value, options) {
   	options = options || {};
-
   	var expires = options.expires;
-
   	if (typeof expires == "number" && expires)
   	{
     	var d = new Date();
@@ -57,11 +57,8 @@ $(document).ready(function(){
   	{
     	options.expires = expires.toUTCString();
   	}
-
   	value = encodeURIComponent(value);
-
   	var updatedCookie = name + "=" + value;
-
   	for (var propName in options)
   	{
     	updatedCookie += "; " + propName;
@@ -71,9 +68,23 @@ $(document).ready(function(){
       		updatedCookie += "=" + propValue;
     	}
   	}
-
   	document.cookie = updatedCookie;
-}
+	}
+
+	$('.portfolio').find('.info').click(function(){
+		if ( $(this).hasClass('show-info') )
+		{
+			$(this).removeClass('active');
+			$(this).parent().find('.hide-info').addClass('active');
+			$(this).parent().find('.more-info').addClass('active');
+		}
+		if ( $(this).hasClass('hide-info') )
+		{
+			$(this).removeClass('active');
+			$(this).parent().find('.show-info').addClass('active');
+			$(this).parent().find('.more-info').removeClass('active');
+		}
+	});
 
 });
 

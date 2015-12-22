@@ -1,7 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: Helvetica;
 }
 
 html{
@@ -14,6 +14,8 @@ body{
 	position: relative;
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 body.grey{
@@ -57,7 +59,7 @@ body.light{
 
 	#content-block{
 		max-width: 960px;
-		min-width: 700px;
+		min-width: 960px;
 	}
 
 }
@@ -65,14 +67,14 @@ body.light{
 .wrapper{
 	width: 100%;
 	height: 100%;
-	max-width: 960px;
-	min-width: 800px;
+	max-width: 980px;
+	min-width: 980px;
 	margin: 0px auto;
 }
 
 #head-block{
 	height: 25%;
-	width: 100%;
+	width: 960px;
 	margin: 0px auto;
 	position: relative;
 	-webkit-transition: height 1s;
@@ -137,6 +139,7 @@ body.light #head-block .color{
 }
 
 #content-block{
+	width: 960px;
 	margin: 0px auto;
 	display: none;
 }
@@ -146,8 +149,9 @@ body.light #head-block .color{
 }
 
 .nav-block{
-	width: 100%;
+	width: 960px;
 	height: 50%;
+	margin: 0px auto;
 	-webkit-transition: height 1s;
     -moz-transition: height 1s;
     -o-transition: height 1s;
@@ -160,7 +164,7 @@ body.light #head-block .color{
 	max-height: 468px;
 	display: block;
 	float: left;
-	margin-right: 6.5%;
+	margin-right: 6.6%;
 	-webkit-transition: height 1s;
     -moz-transition: height 1s;
     -o-transition: height 1s;
@@ -248,7 +252,6 @@ body.light .nav-block .main-nav:after{
 	width: 50%;
 	height: auto;
 	margin: 25px auto 0px auto;
-	opacity: 0.4;
 }
 
 .nav-block .line{
@@ -286,10 +289,14 @@ body.light #content-block{
 	color: black;
 }
 
+#content-block{
+	width: 960px;
+	min-height: 50%;
+}
+
 #content-block .info-block-wrapper{
-	overflow: hidden;
 	width: 100%;
-	height: 300px;
+	height: auto;
 	display: none;
 	position: relative;
 }
@@ -298,7 +305,8 @@ body.light #content-block{
 	display: block;
 }
 
-#content-block .info-block{
+#content-block .info-block-wrapper.active .info-block{
+	display: block;
 	width: 100%;
 	margin: 0px auto;
 	height: auto;
@@ -312,16 +320,107 @@ body.light #content-block{
 }
 
 #content-block .about.info-block{
-	border-top: 3px solid #0082AA;
+	border-top: 5px solid #0082AA;
 }
 #content-block .portfolio.info-block{
-	border-top: 3px solid #70CC18;
+	border-top: 5px solid #70CC18;
 }
 #content-block .resume.info-block{
-	border-top: 3px solid #FBAD09;
+	border-top: 5px solid #FBAD09;
 }
 #content-block .contacts.info-block{
-	border-top: 3px solid #EF6A00;
+	border-top: 5px solid #EF6A00;
+	line-height: 128px;
+}
+#content-block .contacts.info-block ul{
+	max-width: 480px;
+	margin: 0px auto;
+}
+#content-block .contacts.info-block li{
+	list-style: none;
+}
+#content-block .contacts.info-block a{
+	line-height: 128px;
+	text-decoration: none;
+	display: block;
+	margin-top: 25px;
+}
+#content-block .contacts.info-block a:hover{
+	text-decoration: underline;
+}
+body.grey #content-block .contacts.info-block a{
+	color: #C7EDFC;
+	text-shadow: 1px 1px 2px black;
+}
+body.light #content-block .contacts.info-block a{
+	color: #2B9CA2;
+	text-shadow: 1px 1px 2px #CACACA;
+}
+#content-block .contacts.info-block img{
+	display: block;
+	float: left;
+	margin-right: 25px;
+}
+#content-block .portfolio .site-block{
+	margin-top: 25px;
+	width: 300px;
+	float: left;
+	margin-left: 29px;
+	overflow-x: hidden;
+	position: relative;
+}
+#content-block .portfolio .site-block:first-of-type{
+	margin-left: 0px;
+}
+#content-block .portfolio .site-block:nth-child(3n+4){
+	margin-left: 0px;
+}
+#content-block .portfolio .site-block img{
+	display: block;
+	width: auto;
+	height: 250px;
+	margin-top: 10px;
+}
+#content-block .portfolio .site-block .title{
+	font-size: 18px;
+	float: left;
+	text-decoration: underline;
+}
+body.grey #content-block .portfolio .site-block .title{
+	color: #C7EDFC;
+}
+body.light #content-block .portfolio .site-block .title{
+	color: #2B9CA2;
+}
+#content-block .portfolio .site-block .info{
+	cursor: pointer;
+	font-size: 18px;
+	text-align: right;
+	display: none;
+}
+#content-block .portfolio .site-block .info.active{
+	display: block;
+}
+#content-block .portfolio .site-block .more-info{
+	position: absolute;
+	top: 31px;
+	width: 300px;
+	height: 250px;
+	background-color: rgba(0,0,0,0.9);
+	display: none;
+}
+#content-block .portfolio .site-block .more-info.active{
+	display: block;
+}
+#content-block .portfolio .site-block .more-info ul{
+	margin: 10px 25px 0px 25px;
+	color: white;
+}
+#content-block .portfolio .site-block .more-info ul li{
+	margin-top: 5px; 
+}
+#content-block .portfolio .site-block .more-info ul li:first-of-type{
+	margin-top: 0px; 
 }
 
 #footer-block{
