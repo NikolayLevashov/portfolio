@@ -534,6 +534,13 @@ body.light #content-block .contacts.info-block a{
 #content-block .about.info-block ul li{
 	margin-top: 5px;
 }
+body.grey #content-block .about.info-block ul li{
+	color: white !important;
+}
+
+body.light #content-block .about.info-block ul li{
+	color: black !important;
+}
 /**/
 #content-block .resume.info-block a{
 	width: 128px;
