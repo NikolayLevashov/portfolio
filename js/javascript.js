@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	if (matchMedia('only screen and (max-width: 480px)').matches)
+	if (matchMedia('only screen and (max-width: 768px)').matches)
 		{
 			$('body').addClass('mobile');
 			$('#content-block').find('.about-block-wrapper').addClass('active')
@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		var index = $(this).index();
 
-		if (matchMedia('only screen and (max-width: 480px)').matches)
+		if (matchMedia('only screen and (max-width: 768px)').matches)
 		{
 			$('#content-block').find('.info-block-wrapper').removeClass('active');
 			$('#content-block').find('.info-block-wrapper').eq(index).addClass('active');
