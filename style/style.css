@@ -26,15 +26,91 @@ body.light{
 	background-color: #DEDEDE;
 }
 
-/*@media screen and (max-width: 480px){
+@media screen and (max-width: 480px){
 	
 	.wrapper{
-		max-width: 460px;
+		max-width: 460px !important;
+		min-width: none !important;
+		height: auto !important;
+	}
+
+	#head-block{
+		width: auto !important;
+		max-width: 460px !important;
+	}
+	#head-block .head-title{
+		font-size: 1.8rem !important;
+		margin-left: 5px;
+	}
+	#head-block .info{
+		font-size: 1rem !important;
+		width: 250px;
+		margin-left: 5px;
+	}
+	#head-block .color{
+		top: 32px !important;
+	}
+
+	.nav-block{
+		width: auto !important;
+		max-width: 460px !important;
+		height: 50px !important;
+		margin-top: 15px !important;
+	}
+	.nav-block a{
+		margin-right: 5.6% !important;
+	}
+	.nav-block a:first-of-type{
+		margin-left: 5px !important;
+	}
+	.nav-block a:last-of-type{
+		margin-right: 5px !important;
+	}
+	.nav-block .main-nav p{
+		margin-top: 7px !important;
+		line-height: auto !important;
+		font-size: 14px !important;
+	}
+	.nav-block .main-nav img{
+		display: none !important;
+	}
+	#content-block{
+		display: block !important;
+		width: auto !important;
+	}
+	#content-block .about-block-wrapper p{
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	#content-block .about-block-wrapper ul{
+		margin-left: 22px !important;
+	}
+	#content-block .info-block-wrapper .info-block{
+		margin-top: 15px !important;
+		left: 0px !important;
+		position: relative !important;
+	}
+
+	#content-block .portfolio .site-block{
+		float: none !important;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+
+	#content-block .contacts a{
+		font-size: 0.8rem !important;
+	}
+	#content-block .contacts a img{
+		margin-left: 5px !important;
+	}
+
+	#footer-block{
+		height: 25px !important;
 	}
 
 }
 
-@media screen and (min-width: 768px){
+/*@media screen and (min-width: 768px){
 	
 	.wrapper{
 		max-width: 750px;
@@ -68,7 +144,7 @@ body.light{
 	width: 100%;
 	height: 100%;
 	max-width: 980px;
-	min-width: 980px;
+	/*min-width: 980px;*/
 	margin: 0px auto;
 }
 
@@ -355,6 +431,19 @@ body.grey #content-block .contacts.info-block a{
 body.light #content-block .contacts.info-block a{
 	color: #2B9CA2;
 	text-shadow: 1px 1px 2px #CACACA;
+}
+/**/
+#content-block .about.info-block .title{
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#content-block .about.info-block ul{
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+#content-block .about.info-block ul li{
+	margin-top: 5px;
 }
 /**/
 #content-block .resume.info-block a{
