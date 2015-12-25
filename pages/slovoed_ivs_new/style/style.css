@@ -95,7 +95,7 @@ body{
 	}
 
 	#footer{
-		height: auto;
+		height: auto !important;
 	}
 
 	.footer-content{
@@ -104,7 +104,8 @@ body{
 	}
 
 	.footer-content .left-side img{
-		float: left;
+		display: block !important;
+		float: none !important;
 		height: 25px;
 		width: auto;
 	}
@@ -113,6 +114,10 @@ body{
 		font-size: 13px !important;
 		float: left;
 		line-height: 25px !important;
+		margin-right: 15px !important;
+	}
+	.footer-content .left-side a:first-of-type{
+		margin-right: 15px !important;
 	}
 
 	.footer-content .right-side{
@@ -149,6 +154,20 @@ body{
 		display: block;
 		top: 20px !important;
 		text-align: center;
+	}
+	.pages .green-button{
+		font-size: 15px !important;
+		width: auto !important;
+		line-height: 42px !important;
+	}
+	.pages .green-button span{
+		font-size: 15px !important;
+		line-height: 42px !important;
+		top: 0px !important;
+	}
+
+	.pages .emailed-form{
+		width: auto !important;
 	}
 
 	#products .activate-code-block{
@@ -191,6 +210,84 @@ body{
 
 	#products .products-menu .product-description .data{
 		font-size: 15px !important;
+	}
+
+	.mobile #products .mobile-products-menu{
+		width: auto !important;
+		margin: 0px auto;
+	}
+	.mobile #products .mobile-products-menu .block{
+		display: block !important;
+	}
+	.mobile #products .mobile-products-menu .title-block{
+		width: 100%;
+		border-bottom: 3px solid lightgrey;
+	}
+	.mobile #products .mobile-products-menu .title-block span{
+		display: inline-block;
+		color: #00C6FF;
+		border-bottom: 3px solid #00C6FF;
+		position: relative;
+		top: 3px;
+		padding-left: 5px;
+	}
+	.mobile #products .mobile-products-menu .product{
+		width: auto !important;
+		float: none !important;
+	}
+	.mobile #products .mobile-products-menu .product{
+		width: auto !important;
+		float: none !important;
+	}
+	.mobile #products .mobile-products-menu .product .product-img{
+		margin-right: 10px;
+	}
+	.mobile #products .mobile-products-menu .product .product-description{
+		width: auto !important;
+		float: none !important;
+	}
+	.mobile #products .mobile-products-menu .product .product-description .title{
+		font-size: 14px !important;
+	}
+	.mobile #products .mobile-products-menu .product .product-description .product-code{
+		font-size: 13px !important;
+	}
+	.mobile #products .mobile-products-menu .product .product-description .data{
+		font-size: 14px !important;
+	}
+
+	.mobile #products .no-products{
+	    width: 100%;
+	    height: auto;
+	    margin: 0px auto 0px auto;
+	    /* скрытый блок */
+	    display: block;
+	}
+	.mobile #products .no-products img{
+		width: 85px !important;
+		height: auto !important;
+		display: block;
+		float: left;
+		margin-top: 25px;
+		margin-right: 25px;
+	}
+	.mobile #products .no-products p{
+	    text-align: left;
+	    font-size: 14px !important;
+	    color: black;
+	    padding-top: 25px !important;
+	}
+	.mobile #products .no-products a{
+	    text-decoration: underline;
+	    color: #00C6FF;
+	}
+
+	.mobile .dicts-info-block{
+	    width: auto !important;
+	    font-size: 14px !important;
+	}
+	.mobile .dicts-info-block ul li{
+	    height: auto !important;
 	}
 }
 
@@ -838,6 +935,9 @@ body{
 	float: left;
 	line-height: 50px;
 }
+.footer-content .left-side a:first-of-type{
+	margin-right: 0px;
+}
 
 .footer-content .left-side a:last-of-type{
 	margin-right: 0px;
@@ -868,7 +968,7 @@ body{
 .pages .form-block{
     width: 460px;
     height: auto;
-    padding: 50px;
+    padding: 30px;
     margin: 0px auto
 }
 
@@ -1137,24 +1237,16 @@ body{
 }
 
 #products .activate-code-block input{
-    width: 87.5px;
+    width: 90%;
     height: 38px;
-    margin-right: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
     float: left;
     position: relative;
     top: 10px;
     text-align: center;
     font-size: 18px;
 }
-
-#products .activate-code-block input:first-of-type{
-    margin-left: 20px;
-}
-
-#products .activate-code-block input:last-of-type{
-    margin-right: 0px;
-}
-
 #products .activate-code-block .activate-code{
     background-color: #00C6FF;
     width: 100%;
@@ -1342,18 +1434,28 @@ body{
 
 #products .no-products{
     width: 100%;
+    max-width: 960px;
     height: auto;
-    margin: 25px auto 0px auto;
+    margin: 0px auto 0px auto;
     /* скрытый блок */
-    display: none;
+    display: block;
 }
-
+#products .no-products img{
+	display: block;
+	float: left;
+	margin-top: 25px;
+	margin-right: 25px;
+}
 #products .no-products p{
-    text-align: center;
-    font-size: 22px;
-    color: #979797;
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    padding-top: 25px;
 }
-
+#products .no-products a{
+    text-decoration: underline;
+    color: #00C6FF;
+}
 
 /* ------------------------------------------------------------- */
 
@@ -1411,7 +1513,7 @@ body{
 .pages .emailed-form{
     width: 460px;
     height: auto;
-    padding: 50px;
+    padding: 30px;
     display: block;
     margin: 25px auto 0px auto;
     display: none;
@@ -1430,4 +1532,50 @@ body{
 
 .pages .emailed-form .support{
     color: #00C6FF;
+}
+
+#mainpage .email-check-block{
+	width: 100%;
+	max-width: 460px;
+	height: auto;
+	margin: 0px auto; 
+}
+
+#mainpage .email-check-block p{
+	color: black;
+	font-size: 18px;
+	margin: 0px 5% 0px 5%;
+}
+
+/**/
+
+.dicts-info-block{
+    width: 950px;
+    margin: 50px auto 0px auto;
+    font-size: 18px;
+    color: #525252;
+}
+
+.dicts-info-block p:first-of-type{
+    margin-bottom: 15px;
+}
+
+.dicts-info-block p:last-of-type{
+    margin-top: 15px;
+}
+
+.dicts-info-block ul li{
+    list-style: none;
+    clear: both;
+    height: 38px;
+}
+
+.dicts-info-block ul li:last-of-type{
+    margin-top: 15px;
+}
+
+.dicts-info-block ul li img{
+    display: block;
+    float: left;
+    margin-right: 15px;
 }
