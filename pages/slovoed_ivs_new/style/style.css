@@ -1411,25 +1411,25 @@ body{
 #products .product .online-badge{
     width: 137px;
     height: 42px;
-    background: url("../images/badges/online.png") no-repeat;
+    background: url("../images/online.png") no-repeat;
 }
 
 #products .product .ios-badge{
     width: 133px;
     height: 42px;
-    background: url("../images/badges/ios.png") no-repeat;
+    background: url("../images/ios.png") no-repeat;
 }
 
 #products .product .google-badge{
     width: 117px;
     height: 42px;
-    background: url("../images/badges/google.png") no-repeat;
+    background: url("../images/google.png") no-repeat;
 }
 
 #products .product .osx-badge{
     width: 172px;
     height: 42px;
-    background: url("../images/badges/osx.png") no-repeat;
+    background: url("../images/osx.png") no-repeat;
 }
 
 #products .no-products{
