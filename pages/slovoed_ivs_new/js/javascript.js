@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+	if (matchMedia('only screen and (max-width: 468px)').matches)
+	{
+		$('body').addClass('mobile');
+	}
+
 	$('#head-nav').find('.main-button').find('.blue-bg').click(function(){
 		
 		$('#head-nav').find('.main-button').find('.blue-bg').removeClass('active');
@@ -27,25 +32,6 @@ $(document).ready(function(){
 		
 	});
 
-	$('.form-block').find('li').click(function(){
-		var i = $(this).index();
-		$('.form-block').find('li').removeClass('active');
-		$(this).addClass('active');
-		$('.form-block').find('.forms-block.active').removeClass('active');
-		if ( i == 0 )
-		{
-			$('.form-block').find('.login-form-block').addClass('active');
-			$('.join-form-block').find('input').not('.join-form-block .button').val("");
-			$('#check1').attr('checked', false);
-		}
-		if ( i == 1 )
-		{
-			$('.form-block').find('.join-form-block').addClass('active');
-			$('.login-form-block').find('input').not('.login-form-block .button').val("");
-		}
-
-	});
-
 	$("#products").find(".products-menu").find("li").click(function(){
 
         var index = $(this).index();
@@ -61,7 +47,7 @@ $(document).ready(function(){
 	$(".pages").find(".reset-button").click(buttonsInForms);
     $(".pages").find(".update-button").click(buttonsInForms);
 
-    $('#mainpage').find('.form-block').find('input').on('focus', function(){
+    $('.login-form-block').find('input').on('focus', function(){
 		$(this).removeClass('error-input');
 	});
 
@@ -72,52 +58,61 @@ function buttonsInForms (){
     $(".pages").find(".password-form").css("display","none");
     $(".pages").find(".emailed-form").css("display","block");
 
-    function timer(){
+   //  function timer()
+   //  {
 
-        var obj=document.getElementById('time');
-        obj.innerHTML--;
+   //      var obj=document.getElementById('time');
+   //      obj.innerHTML--;
         
-        if( obj.innerHTML == 0 )
-        {
+   //      if( obj.innerHTML == 0 )
+   //      {
 
-        	function parse_url( url ) {
+   //      	function parse_url( url ) {
 
-            var parts = url.split( "#" ),
-            out = {};
+   //          var parts = url.split( "#" ),
+   //          out = {};
 
-            out.url = url;
-            out.hash = ( parts.length > 1 ? ( ( url = parts.shift() ) || 1 ) && parts.join( "#" ) : "" );
-            url = ( parts = url.split( "?" ) ).shift();
-            out.search = parts.join( "?" );
-            out.scheme = ( parts = url.split( "://" ) ) && parts.length > 1 ? parts.shift() : "";
-            out.host = ( ( parts = parts.join( "://" ).split( "/" ) ) && parts.length > 1 &&
-                        parts[0].indexOf(".") > 0 || out.scheme ) && parts.shift() || "";
-            out.script = parts.pop();
-            // out.path = ( parts.length > 0 ? "/" : "" ) + parts.join( "/" );
-            out.path = parts.shift();
-            return out;
-        	}
-       		var out = parse_url( window.location.href );
-       		var resetPwd = (window.location.href.match(/(pwd_reset)/g) ? true : false);
-       		var changePwd = (window.location.href.match(/(pwd_change)/g) ? true : false);
+   //          out.url = url;
+   //          out.hash = ( parts.length > 1 ? ( ( url = parts.shift() ) || 1 ) && parts.join( "#" ) : "" );
+   //          url = ( parts = url.split( "?" ) ).shift();
+   //          out.search = parts.join( "?" );
+   //          out.scheme = ( parts = url.split( "://" ) ) && parts.length > 1 ? parts.shift() : "";
+   //          out.host = ( ( parts = parts.join( "://" ).split( "/" ) ) && parts.length > 1 &&
+   //                      parts[0].indexOf(".") > 0 || out.scheme ) && parts.shift() || "";
+   //          out.script = parts.pop();
+   //          // out.path = ( parts.length > 0 ? "/" : "" ) + parts.join( "/" );
+   //          out.path = parts.shift();
 
-       		if ( resetPwd == true )
-       		{
-       			var desiredPage = 'login.htm';
-       			window.location.href = out.scheme + '://' + out.host + '/' + out.path + '/' + desiredPage;
-       		}
-       		if ( changePwd == true )
-       		{
-       			var desiredPage = 'activation/index.htm' ;
-       			window.location.href = out.scheme + '://' + out.host + '/' + out.path + '/' + desiredPage ;
-       		}
-        	setTimeout(function(){},1000);
-        }
-        else
-        {
-        	setTimeout(timer,1000);}
-        }
-        setTimeout(timer,1000);
+   //          return out;
+
+   //      	}
+    
+   //     		var out = parse_url( window.location.href );
+
+   //     		var resetPwd = (window.location.href.match(/(pwd_reset)/g) ? true : false);
+   //     		var changePwd = (window.location.href.match(/(pwd_change)/g) ? true : false);
+
+   //     		if ( resetPwd == true )
+   //     		{
+   //     			var desiredPage = 'login.htm';
+   //     			alert( out.scheme + '://' + out.host + '/' + out.path + '/' + desiredPage );
+   //     			window.location.href = out.scheme + '://' + out.host + '/' + out.path + '/' + desiredPage;
+   //     		}
+   //     		if ( changePwd == true )
+   //     		{
+   //     			var desiredPage = 'activation/index.htm' ;
+   //     			alert( out.scheme + '://' + out.host + '/' + out.path + '/' + desiredPage );
+   //     			window.location.href = out.scheme + '://' + out.host + '/' + out.path + '/' + desiredPage ;
+   //     		}
+
+   //      	setTimeout(function(){},1000);
+   //      }
+   //      else
+   //      {
+   //      	setTimeout(timer,1000);}
+   //  }
+        
+        // setTimeout(timer,1000);
 };
 
 function checkLoginForm()
@@ -141,11 +136,9 @@ function checkJoinForm()
 	var joinFirstname = $('.join-form').find('.firstname').val();
 	var joinLastname = $('.join-form').find('.lastname').val();
 	var joinEmail = $('.join-form').find('.email').val();
-	var joinPass = $('.join-form').find('.pass').val().length;
-	var joinConfpass = $('.join-form').find('.confpass').val().length;
 	var joincheckbox = $('.join-form').find('#check1').prop('checked');
 
-	if( joinFirstname != '' && joinLastname != '' && joinEmail != '' && joinPass >= 6 && joinConfpass >= 6 && joincheckbox == true )
+	if( joinFirstname != '' && joinLastname != '' && joinEmail != '' && joincheckbox == true )
 	{
 		$('.join-form-block').find('.button').removeAttr('disabled');
 	}
@@ -159,14 +152,10 @@ function checkPostjoinform()
 {
 	
 	var regEmail = /^\w+@\w+\.\w{2,4}$/i;
-	var regNaumPass = /\d/;
-	var regUpperPass = /[A-Z]/
 	
 	var joinFirstname = $('.join-form').find('.firstname').val();
 	var joinLastname = $('.join-form').find('.lastname').val();
 	var joinEmail = $('.join-form').find('.email').val();
-	var joinPass = $('.join-form').find('.pass').val();
-	var joinConfpass = $('.join-form').find('.confpass').val();
 	var joincheckbox = $('.join-form').find('#check1').prop('checked');
 	
 	if( !regEmail.test(joinEmail) )
@@ -176,22 +165,6 @@ function checkPostjoinform()
 	}
 	else{
 		$('.join-form').find('.email').css('border','1px solid green');
-	}
-	if( !regNaumPass.test( joinPass ) || !regUpperPass.test( joinPass ) )
-	{
-		$('.join-form').find('.pass').css('border','1px solid red');
-		return false;
-	}
-	else{
-		$('.join-form').find('.pass').css('border','1px solid green');
-	}
-	if( joinPass != joinConfpass )
-	{
-		$('.join-form').find('.confpass').css('border','1px solid red');
-		return false;
-	}
-	else{
-		$('.join-form').find('.confpass').css('border','1px solid green');
 	}
 }
 
@@ -234,5 +207,19 @@ function checkPostRecoveryform()
 	}
 	else{
 		$('.recovery-form').find('.confpass').css('border','1px solid green');
+	}
+}
+
+function checkCodeInput()
+{
+	var inputSymbol = '-';
+
+	if ( $('#codeInput').val().length == '4'  )
+	{
+		document.getElementById('codeInput').value += inputSymbol;
+	}
+	if ( $('#codeInput').val().length == '9'  )
+	{
+		document.getElementById('codeInput').value += inputSymbol;
 	}
 }

@@ -94,7 +94,7 @@
                 <span>Access Code</span>
 
                 <div class="activate-code">
-                    <input class="error" type="text" placeholder="AAAA-BBBB-CCCC" maxlength="18">
+                    <input id='codeInput' type="text" placeholder="A123-B002-D654" maxlength="14" onkeyup="checkCodeInput();">
                 </div>
 
                 <p class="error-text">Invalid access code</p>
@@ -107,11 +107,7 @@
 
             <br clear="both">
 
-            <div class="no-products">
-                <p>You don't have any active products now</p>
-            </div>
-
-            <div class="products-menu">
+            <div class="products-menu" style='display: block;'>
                 <ul>
                     <li class="active">Active products</li>
                     <li>Inactive products</li>
@@ -120,6 +116,18 @@
 
                 <div class="active-products-block block active">
 
+                    <div class="title-block"><span>Active products</span></div>
+
+                    <div class="no-products">
+                        <img src="../images/no_active_dict.svg">
+                        <p>
+                            У вас пока нет доступных словарей. Пожалуйста, введите код доступа, чтобы получить доступ к своим словарям Slovoed. Если у вас возникли трудности, пожалуйста, обратитесь в нашу службу технической поддержки по адресу <a href='mailto:support@slovoed.com'>support@slovoed.com</a> или по телефону +7 (495) 789-67-17.
+                        </p>
+                        <!-- <p>
+                            You have no dictionaries. Please enter your access code to get access to your dictionaries. Feel free to contact our support team if you need any help. <a href='mailto:support@slovoed.com'>support@slovoed.com</a> / +7 (495) 789-67-17.
+                        </p> -->
+                    </div>
+                    <br clear='both'>
                     <div class="product">
 
                         <div class="product-img">
@@ -213,13 +221,15 @@
                             <a href="" class="product-badge osx-badge"></a>
                             <a href="" class="product-badge google-badge"></a>
                         </div>
-
+                    <br clear='both'>
                     </div>
                 <br clear='both'>
                 </div>
 
                 <div class="inactive-products-block block">
 
+                    <div class="title-block"><span>Inactive products</span></div>
+
                     <div class="product">
 
                         <div class="product-img">
@@ -263,12 +273,14 @@
                             <a href="" class="product-badge osx-badge"></a>
                             <a href="" class="product-badge google-badge"></a>
                         </div>
-
+                    <br clear='both'>
                     </div>
                 <br clear='both'>
                 </div>
 
                 <div class="waiting-for-approval-block block">
+
+                    <div class="title-block"><span>Waiting for approval products</span></div>
 
                     <div class="product">
 
@@ -343,7 +355,7 @@
         <br clear='both'>
         </div>
 
-        <br clear="both">
+        <div class='footer-height'></div>
         
         <footer id='footer'>
             <div class='footer-content'>
