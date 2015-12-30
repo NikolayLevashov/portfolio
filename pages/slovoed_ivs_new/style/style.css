@@ -170,7 +170,6 @@ body{
 		line-height: 42px !important;
 		top: 0px !important;
 	}
-
 	.pages .emailed-form{
 		width: auto !important;
 	}
@@ -178,41 +177,17 @@ body{
 	#products .activate-code-block{
 		width: auto !important;
 	}
-
-	#products .products-menu{
+	.mobile #products .products-menu{
 		width: auto !important;
 		height: auto !important;
 		background-color: transparent !important;
 	}
-
-	#products .products-menu ul {
+	.mobile #products .products-menu ul {
 		display: none;
 	}
-	#products .products-menu .block{
+	.mobile #products .products-menu .block{
 		width: auto !important;
 	}
-
-	#products .products-menu .block .product{
-		width: auto !important;
-	}
-
-	#products .products-menu .product-img{
-		margin-right: 10px;
-	}
-
-	#products .products-menu .product-description{
-		width: auto !important;
-		float: none !important;
-	}
-
-	#products .products-menu .product-description .title{
-		font-size: 15px !important;
-	}
-
-	#products .products-menu .product-description .data{
-		font-size: 15px !important;
-	}
-
 	.mobile #products .products-menu{
 		width: auto !important;
 		margin: 0px auto;
@@ -250,15 +225,18 @@ body{
 	.mobile #products .products-menu .product .product-description .product-code{
 		font-size: 13px !important;
 	}
-	.mobile #products .mobile-products-menu .product .product-description .data{
+	.mobile #products .products-menu .product .product-description .data{
 		font-size: 14px !important;
 	}
-
+	.mobile #products .products-menu .product .badges{
+		height: 84px !important;
+		min-height: 42px;
+		margin-top: 5px !important;
+	}
 	.mobile #products .no-products{
 	    width: 100%;
 	    height: auto;
 	    margin: 0px auto 0px auto;
-	    /* скрытый блок */
 	    display: block;
 	}
 	.mobile #products .no-products img{
@@ -1412,25 +1390,25 @@ body{
 #products .product .online-badge{
     width: 137px;
     height: 42px;
-    background: url("../images/online.png") no-repeat;
+    background: url("../images/badges/online.png") no-repeat;
 }
 
 #products .product .ios-badge{
     width: 133px;
     height: 42px;
-    background: url("../images/ios.png") no-repeat;
+    background: url("../images/badges/ios.png") no-repeat;
 }
 
 #products .product .google-badge{
     width: 117px;
     height: 42px;
-    background: url("../images/google.png") no-repeat;
+    background: url("../images/badges/google.png") no-repeat;
 }
 
 #products .product .osx-badge{
     width: 172px;
     height: 42px;
-    background: url("../images/osx.png") no-repeat;
+    background: url("../images/badges/osx.png") no-repeat;
 }
 
 #products .no-products{
