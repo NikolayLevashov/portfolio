@@ -15,9 +15,6 @@ body{
 	}
 }
 @media (min-width: 501px) and (max-width: 768px){
-	.nav-pos-right{
-		float: right;
-	}
 	.content-container .container-info .work-block-wrapper{
 		width: 45%;
 		margin: 0px 0px 4% 4%;
